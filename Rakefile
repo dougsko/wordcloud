@@ -2,6 +2,9 @@
 
 require 'rubygems'
 require 'bundler'
+require './wordcloud.rb'
+require 'sinatra/activerecord/rake'
+
 begin
   Bundler.setup(:default, :development)
 rescue Bundler::BundlerError => e
@@ -17,7 +20,7 @@ Jeweler::Tasks.new do |gem|
   gem.name = "wordcloud"
   gem.homepage = "http://github.com/dougsko/wordcloud"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
+  gem.summary = %Q{Make a simple word cloud}
   gem.description = %Q{TODO: longer description of your gem}
   gem.email = "dougtko@gmail.com"
   gem.authors = ["Doug P."]

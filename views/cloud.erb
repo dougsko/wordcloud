@@ -1,0 +1,14 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <title>Word Cloud</title>
+    </head>
+    <body>
+<% @words.each do |word| %>
+    <span class="word" style="font-size:<%= scale(word.count) %>">
+        <a href="/delete/<%= word.id %>"><%= word.word %></a>
+    </span>&nbsp
+<% end %>
+
+</body>
+</html>
